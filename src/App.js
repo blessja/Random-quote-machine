@@ -13,7 +13,7 @@ function App() {
   );
   const [author, setAuthor] = useState("Kevin Kruse");
 
-  const [randomNumber, setRandomNumber] = useState(0);
+  const [, setRandomNumber] = useState(0);
   const [quotesArray, setQuotesArray] = useState(0);
   const [accentColor, setAccentColor] = useState("#3366E6");
 
@@ -25,7 +25,7 @@ function App() {
   };
   useEffect(() => {
     fetchQuotes(quoteDBUrl);
-  }, [quoteDBUrl]);
+  }, []);
 
   const getRandomQuote = () => {
     let randomInteger = Math.floor(quotesArray.length * Math.random());
